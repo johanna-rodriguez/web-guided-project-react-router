@@ -7,6 +7,7 @@ export default function Home() {
   // navigate us to <website base URL>/items-list
   const history = useHistory()
   const routeToShop = () => {
+    console.log('finished fetching items...')
     history.push('/items-list')
   }
 
