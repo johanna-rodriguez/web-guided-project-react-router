@@ -39,10 +39,10 @@ export default function Item(props) {
       {/* 👉 STEP 9 - Here go the Routes for `<current path>/shipping` and `<current path>/description` */}
       {/* These Routes should render <ItemDetails /> */}
       <Route path={`${path}/description`}>
-        <ItemDetails text={item.description}/>
+        <ItemDetails text={item.description} />
       </Route>
       <Route path={`${path}/shipping`}>
-        <ItemDetails text={item.shipping}/>
+        <ItemDetails text={item.shipping} />
       </Route>
       {/* 👉 STEP 10 - Shorten paths and urls with `useRouteMatch` hook */}
     </div>
