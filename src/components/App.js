@@ -28,13 +28,16 @@ export default function App(props) {
         <div className='nav-links'>
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`/items-list`) */}
           <Link to='/'>Home</Link>
-          <Link to='/items-list/items-list/items-list/items-list'>Shop</Link>
+          <Link to='/items-list'>Shop</Link>
         </div>
       </nav>
 
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
       <Switch>
-        <Route path='/items-list/items-list/items-list/items-list'>
+        <Route path='/items-list/:itemId'>
+          <Item items={stock} />
+        </Route>
+        <Route path='/items-list'>
           <ItemsList items={stock} />
         </Route>
         <Route path='/'>
